@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+int add(int);
+void main()
+{
+int n;
+clrscr();
+printf("Enter n:");
+scanf("%d",&n);
+printf("Sum of digits of %d is %d",n,add(n));
+getch();
+}
+int add(int n)
+{
+if(n==0)
+  return 0;
+ else
+  return n%10+add(n/10);
+}
